@@ -1,4 +1,5 @@
 import { MdOutlineImageSearch } from "react-icons/md"
+import { Link } from "react-router"
 
 const Cta = () => {
   return (
@@ -25,9 +26,12 @@ const Cta = () => {
           <button className="btn btn-sm sm:btn-md rounded-full bg-[#1f2533] hover:bg-[#283042] text-slate-200 border border-slate-700/60 font-semibold px-5 sm:px-6 transition-all duration-200 text-xs sm:text-sm">
             Explore Devices
           </button>
-          <button className="btn btn-sm sm:btn-md rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold border-none px-6 sm:px-7 transition-all duration-200 shadow-[0_4px_20px_rgba(245,158,11,0.4)] hover:shadow-[0_4px_25px_rgba(245,158,11,0.6)] text-xs sm:text-sm">
+          <Link
+            to="/movies"
+            className="btn btn-sm sm:btn-md rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold border-none px-6 sm:px-7 transition-all duration-200 shadow-[0_4px_20px_rgba(245,158,11,0.4)] hover:shadow-[0_4px_25px_rgba(245,158,11,0.6)] text-xs sm:text-sm"
+          >
             Start Browsing
-          </button>
+          </Link>
         </div>
       </div>
     </div>

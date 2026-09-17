@@ -15,12 +15,26 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Action Button / Nav Link */}
-        <div className="navbar-end">
+        {/* Action Button / Nav Links */}
+        <div className="navbar-end flex items-center gap-2 sm:gap-3">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              `btn btn-sm rounded-full px-4 sm:px-5 text-sm font-semibold tracking-wide border transition-all duration-200 ${
+                isActive
+                  ? "bg-[#1c2230] text-amber-400 border-amber-500/40 shadow-sm"
+                  : "bg-transparent hover:bg-[#161b26] text-slate-300 hover:text-white border-transparent hover:border-slate-700/50"
+              }`
+            }
+          >
+            Home
+          </NavLink>
+
           <NavLink
             to="/movies"
             className={({ isActive }) =>
-              `btn btn-sm rounded-full px-5 text-sm font-semibold tracking-wide border transition-all duration-200 ${
+              `btn btn-sm rounded-full px-4 sm:px-5 text-sm font-semibold tracking-wide border transition-all duration-200 ${
                 isActive
                   ? "bg-[#1c2230] text-amber-400 border-amber-500/40 shadow-sm"
                   : "bg-[#161b26] hover:bg-[#202738] text-amber-500 hover:text-amber-400 border-slate-700/50 hover:border-slate-600"

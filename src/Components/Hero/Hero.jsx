@@ -1,5 +1,6 @@
 import { FaFire, FaPlay } from "react-icons/fa6"
 import { IoVideocam } from "react-icons/io5"
+import { Link } from "react-router"
 
 const Hero = () => {
   return (
@@ -49,10 +50,13 @@ const Hero = () => {
           {/* Action Buttons & Indicator */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
             {/* Explore Now Button (DaisyUI btn with glowing amber shadow) */}
-            <button className="btn btn-sm sm:btn-md rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold border-none px-6 shadow-[0_4px_25px_rgba(245,158,11,0.5)] hover:shadow-[0_4px_30px_rgba(245,158,11,0.7)] transition-all duration-200 flex items-center gap-2 text-sm sm:text-base">
+            <Link
+              to="/movies"
+              className="btn btn-sm sm:btn-md rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold border-none px-6 shadow-[0_4px_25px_rgba(245,158,11,0.5)] hover:shadow-[0_4px_30px_rgba(245,158,11,0.7)] transition-all duration-200 flex items-center gap-2 text-sm sm:text-base"
+            >
               <FaPlay className="text-xs fill-current" />
               Explore Now
-            </button>
+            </Link>
 
             {/* Watch Reel Button (DaisyUI btn) */}
             <button className="btn btn-sm sm:btn-md rounded-full bg-[#1b2230]/90 hover:bg-[#252e42] text-slate-100 border border-slate-700/60 font-semibold px-5 backdrop-blur-sm transition-all duration-200 flex items-center gap-2 text-sm sm:text-base">
