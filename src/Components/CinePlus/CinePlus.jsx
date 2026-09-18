@@ -4,11 +4,11 @@ import { Link } from "react-router"
 
 const CinePlus = () => {
   return (
-    <div className="w-full max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+    <div className="w-[95%] sm:w-[90%] lg:w-[80%] mx-auto py-5 sm:py-6 md:py-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         {/* Left Card */}
         <div
-          className="lg:col-span-7 xl:col-span-8 relative rounded-2xl md:rounded-3xl overflow-hidden border border-slate-800/80 bg-cover bg-center p-6 sm:p-8 md:p-10 flex flex-col justify-between min-h-[400px] sm:min-h-[440px] shadow-xl"
+          className="lg:col-span-7 xl:col-span-8 relative rounded-2xl md:rounded-3xl overflow-hidden border border-slate-800/80 bg-cover bg-center p-4 sm:p-8 md:p-10 flex flex-col justify-between min-h-[360px] sm:min-h-[440px] shadow-xl"
           style={{
             backgroundImage: "url('/Assets/Cineplus.png')",
           }}
@@ -19,22 +19,22 @@ const CinePlus = () => {
 
           {/* Top Badge */}
           <div className="relative z-10">
-            <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-black/60 border border-slate-700/60 backdrop-blur-md text-[11px] sm:text-xs font-bold uppercase tracking-wider text-amber-400 shadow-sm">
+            <span className="inline-flex items-center px-3 sm:px-3.5 py-1.5 rounded-full bg-black/60 border border-slate-700/60 backdrop-blur-md text-[10px] sm:text-xs font-bold uppercase tracking-wider text-amber-400 shadow-sm">
               CURATED REEL OF THE WEEK
             </span>
           </div>
 
           {/* Content  */}
           <div className="relative z-10 mt-auto pt-6">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight mb-3">
+            <h1 className="text-xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight mb-3">
               The Auteur Retrospective: Golden Age of Sci-Fi
             </h1>
             <p className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed max-w-xl font-normal mb-6">
               Hand-picked by world-renowned filmmakers, immerse yourself in 14 seminal movies that transformed narrative world-building forever.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <button className="btn btn-sm sm:btn-md rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold border-none px-6 shadow-[0_4px_20px_rgba(245,158,11,0.4)] hover:shadow-[0_4px_25px_rgba(245,158,11,0.6)] transition-all duration-200 flex items-center gap-2 text-xs sm:text-sm">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <button className="btn btn-sm sm:btn-md rounded-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold border-none px-4 sm:px-6 shadow-[0_4px_20px_rgba(245,158,11,0.4)] hover:shadow-[0_4px_25px_rgba(245,158,11,0.6)] transition-all duration-200 flex items-center gap-2 text-xs sm:text-sm">
                 <span>Explore Collection</span>
                 <FaArrowRight className="text-xs" />
               </button>
@@ -46,7 +46,7 @@ const CinePlus = () => {
         </div>
 
         {/* Right Card */}
-        <div className="lg:col-span-5 xl:col-span-4 bg-[#10141e]/90 border border-slate-800/80 rounded-2xl md:rounded-3xl p-6 sm:p-8 flex flex-col justify-between min-h-[400px] sm:min-h-[440px] shadow-xl">
+        <div className="lg:col-span-5 xl:col-span-4 bg-[#10141e]/90 border border-slate-800/80 rounded-2xl md:rounded-3xl p-5 sm:p-8 flex flex-col justify-between min-h-[auto] sm:min-h-[440px] shadow-xl">
           {/* Header */}
           <div>
             <div className="flex items-center justify-between">
@@ -56,7 +56,7 @@ const CinePlus = () => {
               <LuActivity className="text-lg text-slate-300" />
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-black text-white tracking-tight mt-3 mb-2">
+            <h2 className="text-lg sm:text-2xl font-black text-white tracking-tight mt-3 mb-2">
               Top Rated Cinema Pulse
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed font-normal">

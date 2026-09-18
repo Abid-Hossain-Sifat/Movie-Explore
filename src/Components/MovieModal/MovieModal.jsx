@@ -24,12 +24,12 @@ const MovieModal = ({ show, onClose }) => {
   const externalLink = show.officialSite || show.url
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-6 bg-black/80 backdrop-blur-sm animate-fadeIn">
       {/* Backdrop overlay to close when clicking outside */}
       <div className="fixed inset-0" onClick={onClose} />
 
       {/* Modal Container */}
-      <div className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#10141e] border border-slate-700/80 rounded-2xl md:rounded-3xl shadow-2xl p-6 sm:p-8 flex flex-col md:flex-row gap-6 sm:gap-8">
+      <div className="relative z-10 w-[95%] sm:w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-[#10141e] border border-slate-700/80 rounded-2xl md:rounded-3xl shadow-2xl p-4 sm:p-8 flex flex-col md:flex-row gap-5 sm:gap-8">
         {/* Close Button (Top Right) */}
         <button
           type="button"
@@ -81,7 +81,7 @@ const MovieModal = ({ show, onClose }) => {
         <div className="flex-1 flex flex-col justify-between pt-1">
           <div>
             {/* Show Title */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight mb-2 pr-8">
+            <h2 className="text-xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight mb-2 pr-8">
               {show.name}
             </h2>
 

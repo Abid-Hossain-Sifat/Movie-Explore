@@ -6,7 +6,7 @@ import Navbar from "./Components/Navbar/Navbar"
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0b0f19] text-white flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0b0f19] text-white flex flex-col justify-between overflow-x-hidden">
       <Navbar />
       <main className="flex-1">
         <Routes>

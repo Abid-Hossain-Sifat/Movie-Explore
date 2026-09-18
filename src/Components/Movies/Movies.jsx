@@ -81,18 +81,18 @@ const Movies = () => {
   }
 
   return (
-    <div className="w-full max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div className="w-[95%] sm:w-[90%] lg:w-[80%] mx-auto py-6 sm:py-8 md:py-12">
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-10 pb-6 border-b border-slate-800/80">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-4 mb-6 sm:mb-10 pb-5 sm:pb-6 border-b border-slate-800/80">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2.5 sm:mb-3">
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
             Curated Cinema Library
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
             Explore All <span className="text-amber-500">Movies & Shows</span>
           </h1>
-          <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl font-normal leading-relaxed">
+          <p className="text-slate-400 text-xs sm:text-base mt-2 max-w-2xl font-normal leading-relaxed">
             Discover curated blockbuster hits, gripping thrillers, and cinematic masterpieces from around the world.
           </p>
         </div>
@@ -111,18 +111,18 @@ const Movies = () => {
         </div>
       </div>
 
-      <div className="relative mb-8">
-        <IoSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg pointer-events-none" />
+      <div className="relative mb-6 sm:mb-8">
+        <IoSearch className="absolute left-3.5 sm:left-4 top-1/2 -translate-y-1/2 text-slate-400 text-base sm:text-lg pointer-events-none" />
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           placeholder="Search for a movie or show by title (e.g. Girls, Arrow, Gotham)..."
-          className="w-full bg-[#10141e] border border-slate-800 hover:border-slate-700 focus:border-amber-500/80 rounded-xl pl-11 pr-16 py-3.5 text-sm text-white placeholder-slate-500 outline-none transition-all shadow-inner"
+          className="w-full bg-[#10141e] border border-slate-800 hover:border-slate-700 focus:border-amber-500/80 rounded-xl pl-10 sm:pl-11 pr-12 sm:pr-16 py-3 sm:py-3.5 text-xs sm:text-sm text-white placeholder-slate-500 outline-none transition-all shadow-inner"
         />
 
         {/* Right action area */}
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
+        <div className="absolute right-3.5 sm:right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
           {isSearching && (
             <div className="w-4 h-4 rounded-full border-2 border-amber-500/30 border-t-amber-500 animate-spin" />
           )}
@@ -141,7 +141,7 @@ const Movies = () => {
 
       {/* Grid of Cards */}
       {shows.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {shows.map((show) => {
             const cleanSummary = show.summary ? show.summary.replace(/<[^>]*>?/gm, "") : "No summary available."
             const releaseYear = show.premiered ? show.premiered.split("-")[0] : "N/A"

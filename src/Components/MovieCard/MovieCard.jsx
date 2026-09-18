@@ -37,20 +37,20 @@ const MovieCard = () => {
   }
 
   return (
-    <div className="w-full max-w-[80%] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <div className="w-[95%] sm:w-[90%] lg:w-[80%] mx-auto py-6 sm:py-8 md:py-10">
       {/* Section Header */}
       <div className="mb-6 sm:mb-8">
         <p className="text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-500 mb-1">
           Editor&apos;s Criterion
         </p>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
+        <h1 className="text-xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
           Trending Premiere Picks
         </h1>
       </div>
 
       {/* 4 Cards Grid or Loading Skeleton */}
       {loading ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {[1, 2, 3, 4].map((i) => (
             <div
               key={i}
@@ -67,7 +67,7 @@ const MovieCard = () => {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {shows.map((show) => {
             // Clean summary from HTML tags returned by TVMaze
             const cleanSummary = show.summary ? show.summary.replace(/<[^>]*>?/gm, "") : ""
